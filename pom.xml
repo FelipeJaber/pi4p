@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pi4p</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>pi4p-FelipeJaber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Backend pi4p</name>
 	<description>Demo project for Spring Boot</description>
