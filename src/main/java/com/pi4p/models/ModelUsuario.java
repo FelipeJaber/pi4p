@@ -10,27 +10,41 @@ public class ModelUsuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    UUID id;
-    String nome;
+    @Column(name = "user_id")
+    UUID userid;
+    @Column(length = 11)
     String CPF;
-    String senha;
+    @Column(length = 25)
+    String nome;
+    @Column(length = 10)
+    String cargo;
+    int nivel;
 
     public ModelUsuario() {
     }
 
-    public ModelUsuario(UUID id, String nome, String cpf, String senha) {
-        this.id = id;
+    public ModelUsuario(UUID id, String CPF, String nome, String cargo, int nivel) {
+        this.userid = id;
+        this.CPF = CPF;
         this.nome = nome;
-        this.CPF = cpf;
-        this.senha = senha;
+        this.cargo = cargo;
+        this.nivel = nivel;
     }
 
-    public UUID getId() {
-        return id;
+    public UUID getUserid() {
+        return userid;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setUserid(UUID userid) {
+        this.userid = userid;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public String getNome() {
@@ -41,19 +55,19 @@ public class ModelUsuario {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return CPF;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setCpf(String cpf) {
-        this.CPF = cpf;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
-    public String getSenha() {
-        return senha;
+    public int getNivel() {
+        return nivel;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 }
